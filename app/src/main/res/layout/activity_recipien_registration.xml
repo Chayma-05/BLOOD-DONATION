@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#db220a"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".RecipienRegistrationActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#fff"
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/applogo" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Reciping Registration"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Sign up to continue "
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/profile_image"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    theme="@style/TextInputLayoutStyle"
+                    app:boxStrokeColor="#FF000000"
+                    hintTextAppearance="@color/colorPrimary"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/registerFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter full name"
+                        android:drawablePadding="10dp"
+                        android:textColor="#FF000000"
+                        android:textSize="18sp"
+                        android:textColorHint="#FF000000"
+                        android:drawableStart="@drawable/ic_person"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    theme="@style/TextInputLayoutStyle"
+                    app:boxStrokeColor="#FF000000"
+                    hintTextAppearance="@color/colorPrimary"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/registerIdNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter ID Number"
+                        android:inputType="number"
+                        android:drawablePadding="10dp"
+                        android:textColor="#FF000000"
+                        android:textSize="18sp"
+                        android:textColorHint="#FF000000"
+                        android:drawableStart="@drawable/ic_person"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    theme="@style/TextInputLayoutStyle"
+                    app:boxStrokeColor="#FF000000"
+                    hintTextAppearance="@color/colorPrimary"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/registerPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter phone number"
+                        android:drawablePadding="10dp"
+                        android:inputType="number"
+                        android:textColor="#FF000000"
+                        android:textSize="18sp"
+                        android:textColorHint="#FF000000"
+                        android:drawableStart="@drawable/ic_phone"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Spinner
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:id="@+id/bloodGroupsSpinner"
+                    android:background="#FF000000"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:entries="@array/bloodgroups"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    theme="@style/TextInputLayoutStyle"
+                    app:boxStrokeColor="#FF000000"
+                    hintTextAppearance="@color/colorPrimary"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/registerEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Email"
+                        android:inputType="textEmailAddress"
+                        android:drawablePadding="10dp"
+                        android:textColor="#FF000000"
+                        android:textSize="18sp"
+                        android:textColorHint="#FF000000"
+                        android:drawableStart="@drawable/ic_mail"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    theme="@style/TextInputLayoutStyle"
+                    app:boxStrokeColor="#FF000000"
+                    hintTextAppearance="@color/colorPrimary"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/registerPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Password"
+                        android:drawablePadding="10dp"
+                        android:inputType="textPassword"
+                        android:textColor="#FF000000"
+                        android:textSize="18sp"
+                        android:textColorHint="#FF000000"
+                        android:drawableStart="@drawable/ic_lock"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <Button
+                    android:id="@+id/registerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/buttons_background"
+                    android:text="Sign up now "
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/backButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:gravity="center"
+                    android:text="Already registered? Sign In"
+                    android:textColor="#000"
+                    android:textStyle="bold"/>
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</ScrollView>
